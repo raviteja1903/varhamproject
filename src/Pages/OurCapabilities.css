@@ -1,0 +1,85 @@
+/* === Capabilities Section === */
+.capabilities {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("/your-background-image.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 0 5%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.6);
+}
+
+.capabilities-content {
+  position: relative;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.capabilities-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.capabilities-content h1 span {
+  color: #f5d142;
+}
+
+.capabilities-content p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #eaeaea;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 1024px) {
+  .capabilities-content h1 {
+    font-size: 2.5rem;
+  }
+  .capabilities-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .capabilities {
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+  }
+
+  .capabilities-content {
+    max-width: 100%;
+  }
+
+  .capabilities-content h1 {
+    font-size: 2rem;
+  }
+
+  .capabilities-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .capabilities-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .capabilities-content p {
+    font-size: 0.85rem;
+  }
+}

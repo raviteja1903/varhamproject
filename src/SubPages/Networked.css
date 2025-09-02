@@ -1,0 +1,74 @@
+/* Main Section */
+.networked-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  background: #000; /* black background */
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  gap: 40px;
+}
+
+/* Left - Image */
+.networked-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.networked-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Right - Content */
+.networked-content {
+  flex: 1;
+  max-width: 600px;
+}
+.networked-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.networked-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+/* ================== Responsive Design ================== */
+@media (max-width: 1024px) {
+  .networked-main {
+    padding: 40px 40px;
+    gap: 30px;
+  }
+  .networked-content h2 {
+    font-size: 2.2rem;
+  }
+  .networked-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .networked-main {
+    flex-direction: column; /* Stack vertically */
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .networked-content {
+    max-width: 100%;
+  }
+  .networked-content h2 {
+    font-size: 1.8rem;
+  }
+  .networked-image img {
+    max-width: 100%;
+  }
+}

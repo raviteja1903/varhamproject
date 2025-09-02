@@ -1,0 +1,86 @@
+/* === Persistent ISR Section === */
+.persistent-isr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  background: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  gap: 40px;
+}
+
+.persistent-isr-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.persistent-isr-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.persistent-isr-content {
+  flex: 1;
+}
+
+.persistent-isr-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.persistent-isr-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #eaeaea;
+}
+
+/* === Responsive Design === */
+@media (max-width: 1024px) {
+  .persistent-isr {
+    padding: 50px 5%;
+    gap: 30px;
+  }
+
+  .persistent-isr-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .persistent-isr {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .persistent-isr-image {
+    margin-bottom: 20px;
+  }
+
+  .persistent-isr-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .persistent-isr-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .persistent-isr {
+    padding: 30px 4%;
+  }
+
+  .persistent-isr-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .persistent-isr-content p {
+    font-size: 0.85rem;
+  }
+}
