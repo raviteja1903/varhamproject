@@ -1,12 +1,19 @@
 /* Footer.css */
 
+/* Footer container */
 .footer {
-  background-color: #111; /* dark background */
+  width: 100%;
+  background-color: #000; /* solid black */
   color: #fff;
-  padding: 60px 20px 30px;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #222; /* subtle top border */
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  height: 10px;
 }
 
+/* Footer links if needed */
 .footer a {
   color: #fff;
   text-decoration: none;
@@ -14,104 +21,32 @@
 }
 
 .footer a:hover {
-  color: #f39c12; /* highlight on hover */
+  color: #f39c12;
 }
 
-/* Top Section */
-.footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-/* Logo & Brand */
-.footer-brand {
-  flex: 1 1 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.footer-logo {
-  width: 100px;
-  margin-bottom: 15px;
-}
-
-.footer-brand h3 {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-/* Links Section */
-.footer-links {
-  flex: 1 1 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.footer-links a {
-  font-size: 16px;
-}
-
-/* Social Media Section */
-.footer-socials {
-  flex: 1 1 200px;
-  display: flex;
-  gap: 15px;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-/* Circular Social Icons */
-.footer-socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background-color: #222;
-  transition: all 0.3s ease;
-}
-
-.footer-socials a:hover {
-  background-color: #f39c12;
-  color: #111;
-}
-
-/* Bottom Section */
+/* Bottom text */
 .footer-bottom {
-  border-top: 1px solid #444;
-  padding-top: 20px;
-  text-align: center;
   font-size: 14px;
-  color: #aaa;
+  color: #ccc;
 }
 
-/* Responsive Design */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .footer {
+    padding: 30px 15px;
   }
 
-  .footer-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  .footer-bottom {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 25px 10px;
   }
 
-  .footer-socials {
-    justify-content: center;
-  }
-
-  .footer-brand {
-    align-items: center;
+  .footer-bottom {
+    font-size: 12px;
   }
 }
