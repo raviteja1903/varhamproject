@@ -1,0 +1,86 @@
+/* === Container === */
+.hero-container01 {
+  position: relative;
+  width: 100%;
+  height: 100vh;  
+  background: url("/about-bg.jpg") no-repeat center center/cover; /* replace with your image or remove for video */
+  display: flex;
+  align-items: center;   /* vertically centered */
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.hero-container01::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* Text container */
+.hero-overlay01 {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  padding: 20px;
+  text-align: center;  /* keep centered by default */
+}
+
+/* Heading */
+.hero-title01 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.hero-title01 span {
+  color: #f7b733;  
+}
+
+/* Paragraph */
+.hero-text01 {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;  
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-title01 {
+    font-size: 2.5rem;
+  }
+  .hero-text01 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title01 {
+    font-size: 2rem;
+  }
+  .hero-text01 {
+    font-size: 1rem;
+    padding: 0 10px; /* prevent text touching screen edges */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title01 {
+    font-size: 1.5rem;
+  }
+  .hero-text01 {
+    font-size: 0.9rem;
+    padding: 0 8px;
+  }
+}
