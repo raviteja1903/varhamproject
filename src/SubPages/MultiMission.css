@@ -1,16 +1,19 @@
+/* === Multi-Mission Section === */
 .multi-mission {
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 60px 8%;
   background: #000; /* black background */
   color: #fff;
   font-family: "Poppins", sans-serif;
-  gap: 40px; 
+  gap: 40px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 .multi-mission-content {
   flex: 1;
+  min-width: 280px; /* prevents content from shrinking too small */
 }
 
 .multi-mission-content h2 {
@@ -28,6 +31,7 @@
 
 .multi-mission-image {
   flex: 1;
+  min-width: 280px;
   display: flex;
   justify-content: center;
 }
@@ -38,12 +42,15 @@
   border-radius: 8px;
 }
 
-/* ===== Responsive ===== */
+/* === Responsive Design === */
+
+/* Large tablets / small desktops */
 @media (max-width: 992px) {
   .multi-mission {
     flex-direction: column;
     text-align: center;
-    padding: 30px;
+    padding: 40px 5%;
+    gap: 25px;
   }
 
   .multi-mission-content h2 {
@@ -55,16 +62,49 @@
   }
 }
 
-@media (max-width: 600px) {
+/* Tablets / large phones */
+@media (max-width: 768px) {
   .multi-mission {
-    padding: 20px;
+    padding: 35px 5%;
   }
 
   .multi-mission-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .multi-mission-content p {
     font-size: 0.9rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .multi-mission {
+    padding: 25px 4%;
+    gap: 20px;
+  }
+
+  .multi-mission-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .multi-mission-content p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small phones (320px) */
+@media (max-width: 360px) {
+  .multi-mission {
+    padding: 20px 3%;
+    gap: 15px;
+  }
+
+  .multi-mission-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .multi-mission-content p {
+    font-size: 0.8rem;
   }
 }

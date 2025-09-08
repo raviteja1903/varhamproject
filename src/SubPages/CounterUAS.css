@@ -8,10 +8,12 @@
   color: #fff;
   font-family: "Poppins", sans-serif;
   gap: 40px;
+  flex-wrap: wrap; /* ensure items wrap on smaller screens */
 }
 
 .counter-uas-content {
   flex: 1;
+  min-width: 280px; /* ensures content doesn't shrink too small */
 }
 
 .counter-uas-content h2 {
@@ -28,6 +30,7 @@
 
 .counter-uas-image {
   flex: 1;
+  min-width: 280px;
   display: flex;
   justify-content: center;
 }
@@ -40,6 +43,8 @@
 }
 
 /* === Responsive Design === */
+
+/* Large tablets / small desktops */
 @media (max-width: 1024px) {
   .counter-uas {
     padding: 50px 5%;
@@ -49,8 +54,13 @@
   .counter-uas-content h2 {
     font-size: 1.8rem;
   }
+
+  .counter-uas-content p {
+    font-size: 0.95rem;
+  }
 }
 
+/* Tablets / medium screens */
 @media (max-width: 768px) {
   .counter-uas {
     flex-direction: column;
@@ -72,13 +82,15 @@
   }
 
   .counter-uas-content p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 
+/* Large phones / small screens */
 @media (max-width: 480px) {
   .counter-uas {
     padding: 30px 4%;
+    gap: 20px;
   }
 
   .counter-uas-content h2 {
@@ -87,5 +99,25 @@
 
   .counter-uas-content p {
     font-size: 0.85rem;
+  }
+}
+
+/* Extra small phones (320px) */
+@media (max-width: 360px) {
+  .counter-uas {
+    padding: 25px 3%;
+    gap: 15px;
+  }
+
+  .counter-uas-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .counter-uas-content p {
+    font-size: 0.8rem;
+  }
+
+  .counter-uas-image {
+    margin-bottom: 15px;
   }
 }

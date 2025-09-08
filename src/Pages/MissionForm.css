@@ -1,4 +1,4 @@
-/* Reset default styles */
+/* === Reset default styles === */
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +11,13 @@ body, html {
   width: 100%;
 }
 
-/* Container styling */
+/* === Container styling === */
 .mission-container {
   position: relative;
   min-height: 100vh;
   width: 100%;
   padding: 40px 20px;
   background: url("https://getwallpapers.com/wallpaper/full/a/0/d/1369103-military-hd-wallpapers-1080p-1920x1080-for-macbook.jpg") no-repeat center center/cover;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,22 +42,24 @@ body, html {
   z-index: 2;
 }
 
-/* Heading */
+/* === Heading === */
 .mission-container h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-/* Description text */
+/* === Description text === */
 .mission-description {
   max-width: 800px;
   margin: 0 auto 40px auto;
   font-size: 1.1rem;
   line-height: 1.6;
+  padding: 0 10px;
+  text-align: left;
 }
 
-/* Form styling */
+/* === Form styling === */
 .mission-form {
   background: rgba(255, 255, 255, 0.05);
   padding: 30px;
@@ -77,6 +78,7 @@ body, html {
   flex-wrap: wrap;
 }
 
+/* Input group styling */
 .input-group {
   flex: 1;
   display: flex;
@@ -104,7 +106,7 @@ body, html {
   color: #ddd;
 }
 
-/* Input column for textarea */
+/* Textarea styling */
 .input-column {
   display: flex;
   flex-direction: column;
@@ -155,28 +157,72 @@ body, html {
   transform: scale(1.05);
 }
 
-/* Responsive adjustments */
+ 
+
+/* Medium screens: tablets */
 @media (max-width: 900px) {
   .mission-container h1 {
     font-size: 2rem;
   }
   .mission-description {
     font-size: 1rem;
-    padding: 0 10px;
   }
   .input-row {
     flex-direction: column;
   }
+  .mission-form {
+    padding: 25px;
+  }
 }
 
-@media (max-width: 500px) {
+/* Small screens: large phones */
+@media (max-width: 600px) {
   .mission-container h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+  }
+  .mission-description {
+    font-size: 0.95rem;
   }
   .mission-form {
     padding: 20px;
   }
   .submit-btn {
     width: 100%;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}
+
+/* Extra small screens: small phones */
+@media (max-width: 480px) {
+  .mission-container h1 {
+    font-size: 1.6rem;
+  }
+  .mission-description {
+    font-size: 0.9rem;
+  }
+  .mission-form {
+    padding: 15px;
+  }
+  .submit-btn {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Ultra small screens: very small phones */
+@media (max-width: 360px) {
+  .mission-container h1 {
+    font-size: 1.4rem;
+  }
+  .mission-description {
+    font-size: 0.85rem;
+  }
+  .mission-form {
+    padding: 12px;
+  }
+  .submit-btn {
+    padding: 10px;
+    font-size: 0.9rem;
   }
 }
