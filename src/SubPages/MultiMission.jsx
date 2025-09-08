@@ -1,7 +1,7 @@
 import React from "react";
 import "./MultiMission.css";
 import Networked from "./Networked";
- 
+import image from "../assets/image01.jpg" 
  
 
 const MultiMission = () => {
@@ -23,7 +23,7 @@ const MultiMission = () => {
       </div>
 
       <div className="multi-mission-image">
-        <img src="" alt="Multi Mission Vehicle" />
+        <img src={image} alt="Multi Mission Vehicle" />
       </div>
     </section>
     <Networked/>

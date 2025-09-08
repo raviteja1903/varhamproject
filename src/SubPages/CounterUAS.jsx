@@ -1,6 +1,7 @@
 import React from "react";
 import "./CounterUAS.css";
 import PersistentISR from "./PersistentISR";
+import image from "../assets/image4.jpg"
 
 const CounterUAS = () => {
   return (
@@ -20,7 +21,7 @@ const CounterUAS = () => {
         </p>
       </div>
       <div className="counter-uas-image">
-        <img src="/your-image.jpg" alt="Counter-UAS Robotics" />
+        <img src= {image} alt="Counter-UAS Robotics" />
       </div>
     </section>
     <PersistentISR/>

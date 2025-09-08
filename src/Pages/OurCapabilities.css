@@ -3,13 +3,24 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("/your-background-image.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   color: #fff;
   font-family: "Poppins", sans-serif;
   padding: 0 5%;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .overlay {
@@ -19,6 +30,7 @@
   width: 100%;
   height: 100%;
   background: rgba(10, 10, 10, 0.6);
+  z-index: 1;
 }
 
 .capabilities-content {

@@ -1,11 +1,9 @@
- /* MissionForm.css */
-
 /* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body, html {
@@ -13,13 +11,14 @@ body, html {
   width: 100%;
 }
 
-/* Container */
+/* Container styling */
 .mission-container {
   position: relative;
   min-height: 100vh;
   width: 100%;
   padding: 40px 20px;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+  background: url("https://img.freepik.com/premium-vector/military-illustration-army-background_40382-223.jpg") no-repeat center center/cover;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,15 +27,14 @@ body, html {
   text-align: center;
 }
 
-/* Overlay for better readability */
 .mission-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
   z-index: 1;
 }
 
@@ -49,19 +47,20 @@ body, html {
 .mission-container h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
+/* Description text */
 .mission-description {
   max-width: 800px;
   margin: 0 auto 40px auto;
-  line-height: 1.6;
   font-size: 1.1rem;
-  color: #f0f0f0;
+  line-height: 1.6;
 }
 
-/* Form styles */
+/* Form styling */
 .mission-form {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   padding: 30px;
   border-radius: 12px;
   max-width: 700px;
@@ -71,33 +70,50 @@ body, html {
   gap: 20px;
 }
 
-/* Input row (name + email) */
+/* Input row layout */
 .input-row {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.input-row label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.input-row input {
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.input-group input {
   width: 100%;
   padding: 12px 15px;
   border-radius: 8px;
   border: none;
   outline: none;
   font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
-/* Input column (comments) */
+.input-group input::placeholder {
+  color: #ddd;
+}
+
+/* Input column for textarea */
+.input-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .input-column label {
-  display: block;
   margin-bottom: 5px;
   font-weight: 500;
+  text-align: left;
 }
 
 .input-column textarea {
@@ -108,6 +124,12 @@ body, html {
   outline: none;
   font-size: 1rem;
   resize: vertical;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.input-column textarea::placeholder {
+  color: #ddd;
 }
 
 /* Required field indicator */
@@ -115,9 +137,9 @@ body, html {
   color: #ff4c4c;
 }
 
-/* Submit button */
+/* Submit button styling */
 .submit-btn {
-  background: #ff4c4c;
+  background: #ed1b30;
   color: #fff;
   padding: 14px 25px;
   font-size: 1.1rem;
@@ -129,11 +151,11 @@ body, html {
 }
 
 .submit-btn:hover {
-  background: #e43c3c;
+  background: #f62c2c;
   transform: scale(1.05);
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .mission-container h1 {
     font-size: 2rem;

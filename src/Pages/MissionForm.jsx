@@ -1,4 +1,4 @@
-// MissionForm.jsx
+ 
 import React from "react";
 import "./MissionForm.css";
 
@@ -16,21 +16,28 @@ const MissionForm = () => {
         solve real-world problems and want your work to have a tangible impact
         on national security, your mission starts here.
       </p>
+
       <form className="mission-form">
         <div className="input-row">
-          <label htmlFor="name">
-            Your Name <span className="required">*</span>
-          </label>
-          <input id="name" type="text" required />
-          <label htmlFor="email">
-            Email <span className="required">*</span>
-          </label>
-          <input id="email" type="email" required />
+          <div className="input-group">
+            <label htmlFor="name">
+              Your Name <span className="required">*</span>
+            </label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div className="input-group">
+            <label htmlFor="email">
+              Email <span className="required">*</span>
+            </label>
+            <input id="email" name="email" type="email" required />
+          </div>
         </div>
+
         <div className="input-column">
-          <label htmlFor="comments">Any Comments</label>
-          <textarea id="comments" rows={6}></textarea>
+          <label htmlFor="comments">Any Comments <span className="required">*</span></label>
+          <textarea id="comments" name="comments" rows="6"></textarea>
         </div>
+
         <button type="submit" className="submit-btn">
           SUBMIT
         </button>

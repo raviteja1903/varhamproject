@@ -1,9 +1,17 @@
 import React from "react";
 import "./AboutUs.css";
+import video from "../assets/video7.mp4"
 
 const AboutUs = () => {
   return (
     <div className="hero-container01">
+      {/* Background Video */}
+      <video className="background-video" autoPlay loop muted playsInline>
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay Content */}
       <div className="hero-overlay01">
         <h1 className="hero-title01">
           Engineering for <br /> <span>National Security</span>
@@ -15,14 +23,14 @@ const AboutUs = () => {
           By combining the agility and innovation of a technology startup with
           the discipline of a mission-focused prime, we are building the future
           of deterrence.
-          <br />{" "}
+          <br />
           <span>
             Our approach fuses advanced hardware with an AI-powered software
             backbone, creating integrated systems that deliver an asymmetric
             advantage. We don't wait for requirements; we anticipate threats and
             proactively develop solutions. We are a private partner committed to
             building India's sovereign defence capability, ensuring the Indian
-            Armed Forces have the technology needed to deter and win.{" "}
+            Armed Forces have the technology needed to deter and win.
           </span>
         </p>
       </div>

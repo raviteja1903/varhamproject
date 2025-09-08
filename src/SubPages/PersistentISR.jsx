@@ -1,13 +1,14 @@
 import React from "react";
 import "./PersistentISR.css";
 import MultiMission from "./MultiMission";
+import image from "../assets/image2.jpg"
 
 const PersistentISR = () => {
   return (
     <>
     <section className="persistent-isr">
       <div className="persistent-isr-image">
-        <img src="/your-image.jpg" alt="Persistent ISR Robotics" />
+        <img src= {image} alt="Persistent ISR Robotics" />
       </div>
       <div className="persistent-isr-content">
         <h2>

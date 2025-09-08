@@ -1,7 +1,32 @@
+/* Container holding the video and the overlay */
+.mv-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Background video styling */
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Overlay for content */
+.mv-overlay {
+  position: relative;
+  z-index: 1;
+}
+
 /* === Common Section Styles === */
 .mv-section {
   width: 100%;
-  /* min-height: 100vh; */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -11,6 +36,7 @@
   padding: 80px 10%;
 }
 
+/* Overlay effect over video for readability */
 .mv-section::before {
   content: "";
   position: absolute;
@@ -18,7 +44,8 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.55); /* overlay for readability */
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
 }
 
 .mv-section .content {
@@ -48,20 +75,7 @@
   margin-bottom: 12px;
 }
 
-/* === Backgrounds for Each Section === */
-.mission {
-  background-image: url("/images/mission-bg.jpg"); /* replace with your mission image */
-}
-
-.vision {
-  background-image: url("/images/vision-bg.jpg"); /* replace with your vision image */
-}
-
-.values {
-  background-image: url("/images/values-bg.jpg"); /* replace with your values image */
-}
-
-/* === Responsive === */
+/* === Responsive Design === */
 @media (max-width: 992px) {
   .mv-section {
     padding: 60px 8%;
