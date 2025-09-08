@@ -1,6 +1,6 @@
 import React from "react";
 import "./MissionVisionValues.css";
-import video from "../assets/video99.mp4"
+import video from "../assets/video88.mp4"
 
 const MissionVisionValues = () => {
   return (
